@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S.und Co</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <img
+        class="logo-img"
+        src="./img/logo.svg"
+        alt="company-logo"
+        height="72"
+        width="72"
+      />
+      <div class="hidden-title">MENU</div>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="#">Main One</a></li>
+          <li><a href="#">Page Two</a></li>
+          <li><a href="#">Page Three</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Work</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-language">
+        <p class="focused">EN</p>
+        &nbsp;&nbsp;|&nbsp;&nbsp;GR
+      </div>
+      <a href="#" class="search-icon">
+        <img
+          class="search-icon-svg"
+          src="./img/search-icon.svg"
+          alt="search-icon"
+          height="23.67"
+          width="23.68"
+        />
+      </a>
+      <a href="#" class="toggle-icon">
+        <img
+          class="toggle-icon-img"
+          src="./img/toggle-icon.svg"
+          alt="toggle-icon"
+          height="27"
+          width="30"
+        />
+      </a>
+    </nav>
+    <div class="toggle-menu">
+      <ul>
+        <li><a href="#">Main One</a></li>
+        <li><a href="#">Page Two</a></li>
+        <li><a href="#">Page Three</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Work</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="language">
+        <p class="focused">EN</p>
+        &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;GR
+      </div>
+      <div class="toggle-menu-footer">
+        <div class="social-icons">
+          <img
+            class="social-icon"
+            src="./img/facebook-icon.svg"
+            alt="facebook-icon"
+            height="24"
+            width="24"
+          />
+          <img
+            class="social-icon"
+            src="./img/twitter-icon.svg"
+            alt="twitter-icon"
+            height="24"
+            width="24"
+          />
+          <img
+            class="social-icon"
+            src="./img/instagram-icon.svg"
+            alt="instagram-icon"
+            height="24"
+            width="24"
+          />
+          <img
+            class="social-icon"
+            src="./img/website-icon.svg"
+            alt="website-icon"
+            height="24"
+            width="24"
+          />
+        </div>
+        <di class="cookies">
+          <p>
+            Cookies.&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Privacy.
+          </p>
+        </di>
+        <div class="com-details">
+          <p>S.und@themail.com</p>
+          <p>+30 210 1234 567</p>
+        </div>
+        <div class="copywrite">© The standard Copywrite 2020</div>
+      </div>
+    </div>
+    <div class="main-page">
+      <div class="carousel-wrapper">
+        <ul class="carousel-ul">
+          <li class="slides">
+            <img class="slide-img" src="./img/carousel-1.png" />
+          </li>
+          <li class="slides">
+            <img class="slide-img" src="./img/carousel-2.jpg" />
+          </li>
+          <li class="slides">
+            <img class="slide-img" src="./img/carousel-3.jpg" />
+          </li>
+        </ul>
+        <div class="dot-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+
+      <div class="products-wrapper">
+        <div class="product-container">
+          <img
+            class="product-img"
+            src="./img/product-1.png"
+            alt="product-1-img"
+            height="368"
+            width="696"
+          />
+          <div class="product-info">
+            <span class="product-date">Since the 1500s</span>
+            <span class="product-title">The standard</span>
+            <span class="product-desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt.
+            </span>
+          </div>
+        </div>
+        <div class="product-container reversed">
+          <img
+            class="product-img"
+            src="./img/product-2.png"
+            alt="product-2-img"
+            height="424"
+            width="456"
+          />
+          <div class="product-info">
+            <span class="product-date">Since the 1500s</span>
+            <span class="product-title">The standard</span>
+            <span class="product-desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </span>
+            <button class="search-btn">Search</button>
+          </div>
+        </div>
+      </div>
+      <div class="map-form-wrapper">
+        <div class="map-with-dot">
+          <img
+            class="map-img"
+            src="./img/map2.jpg"
+            alt="map-img"
+            height="1032"
+            width="856"
+          />
+          <span class="map-dot"></span>
+        </div>
+        <div class="form-wrapper">
+          <span class="form-title">Contact Us</span>
+          <span class="form-desc"
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.</span
+          >
+          <input type="text" class="form-name" placeholder="Full Name*" />
+          <input type="email" class="form-email" placeholder="E-mail*" />
+          <input type="tel" class="form-num" placeholder="Phone*" />
+          <select class="form-cat1"></select>
+          <select class="form-cat2"></select>
+          <textarea
+            class="form-message"
+            rows="4"
+            cols="50"
+            placeholder="Message"
+          ></textarea>
+          <span type="form-mini-desc" style="opacity: 0.8"
+            >Please select at least one of the following:</span
+          >
+          <input type="checkbox" name="checkbox1" />
+          <label for="checkbox1">Option 1</label>
+          <input type="checkbox" name="checkbox2" />
+          <label for="checkbox2">Option 2</label>
+          <button class="submit-btn">Submit</button>
+        </div>
+      </div>
+      <div class="footer"></div>
+    </div>
+  </body>
+</html>
