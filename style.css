@@ -45,6 +45,7 @@ body {
   width: 1416px;
   margin-left: 179px;
 }
+
 .navbar-links ul {
   margin: 0;
   padding: 0;
@@ -119,6 +120,9 @@ body {
 }
 
 .toggle-menu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -134,7 +138,7 @@ body {
   justify-content: center;
   padding: 0;
   margin: 0;
-  margin-top: 64px;
+  margin-top: 44px;
   height: 300px;
 }
 
@@ -142,6 +146,7 @@ body {
   list-style: none;
   width: 100%;
   text-align: center;
+  padding-top: 10px;
 }
 
 .toggle-menu li a {
@@ -167,6 +172,7 @@ body {
   font-size: 12;
   font-family: 'Montserrat', sans-serif;
   padding-bottom: 25px;
+  padding-top: 65px;
 }
 
 .focused {
@@ -245,7 +251,7 @@ body {
 }
 
 .slides {
-display: none;
+  display: none;
 }
 
 .slide-img {
@@ -255,7 +261,7 @@ display: none;
 }
 
 .dot-container {
-  text-align:center;
+  text-align: center;
   width: 100%;
   bottom: 30px;
   position: absolute;
@@ -292,24 +298,25 @@ display: none;
 }
 
 .reversed .product-img {
-  padding-left: 144px;
   padding-right: 0;
 }
 
-.product-img {
-  width: auto;
-  object-fit: contain;
-  max-height: fit-content;
-  padding-right: 144px;
+.img1 {
+  height: 368px;
+  width: 696px;
+  object-fit: cover;
+  object-position: initial;
+  transition: 0.3s ease-in-out;
 }
 
 .product-info {
   padding-bottom: 60px;
+  padding-left: 144px;
+  padding-right: 144px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 
 .product-date {
   color: #CFCFCF;
@@ -319,7 +326,7 @@ display: none;
 
 .product-title {
   padding-top: 10px;
-  color:#000000;
+  color: #000000;
   font-size: 32px;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -328,7 +335,7 @@ display: none;
 .product-desc {
   padding-top: 30px;
   max-width: 450px;
-  color:#000000;
+  color: #000000;
   font-size: 18px;
   font-family: 'Montserrat', sans-serif;
 }
@@ -347,6 +354,10 @@ display: none;
   box-shadow: 0px 3px 6px 0px #00000066;
 }
 
+.search-btn:hover {
+  background-color: #2d0194;
+}
+
 .map-form-wrapper {
   display: flex;
   flex-direction: row;
@@ -355,15 +366,12 @@ display: none;
 
 .map-img {
   width: 100%;
-  object-fit: contain;
-  z-index: 1;
+  /*object-fit: contain;*/
 }
 
 .map-with-dot {
   width: 100%;
-  height: 1000px;
-  display: flex;
-  align-items: center;
+  position: relative;
 }
 
 .map-dot {
@@ -371,9 +379,10 @@ display: none;
   width: 32px;
   border-radius: 50%;
   background-color: #B4FF00;
-  position: relative;
-  left: 340px;
-  z-index: 1;
+  position: absolute;
+  left: 48%;
+  bottom: 48%;
+  transition: 0.6s ease;
 }
 
 .form-background {
@@ -396,17 +405,173 @@ display: none;
   z-index: 1;
   position: relative;
   width: 80%;
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 .form-desc {
   display: flex;
   width: 80%;
-  margin-top: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
 }
 
 .form-name {
   width: 80%;
+  height: 50px;
+  border-radius: 28px;
+  border: 1px solid #000000;
+  margin-bottom: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  padding-left: 40px;
+}
+
+.form-name:hover {
+  border: 1px solid #4B00FF;
+}
+
+.form-name:focus {
+  outline: none !important;
+  border: 2px solid #4B00FF;
+}
+
+.form-email {
+  width: 80%;
+  height: 50px;
+  border-radius: 28px;
+  border: 1px solid #000000;
+  margin-bottom: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  padding-left: 40px;
+}
+
+.form-email:hover {
+  border: 1px solid #4B00FF;
+}
+
+.form-email:focus {
+  outline: none !important;
+  border: 2px solid #4B00FF;
+}
+
+.form-num {
+  width: 80%;
+  height: 50px;
+  border-radius: 28px;
+  border: 1px solid #000000;
+  margin-bottom: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  padding-left: 40px;
+}
+
+.form-num:hover {
+  border: 1px solid #4B00FF;
+}
+
+.form-num:focus {
+  outline: none !important;
+  border: 2px solid #4B00FF;
+}
+
+.form-cat-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  width: 80%;
+}
+
+.form-cat {
+  width: 40%;
+  height: 50px;
+  border-radius: 28px;
+  border: 1px solid #000000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  padding-left: 40px;
+}
+
+.form-cat:hover {
+  border: 1px solid #4B00FF;
+}
+
+.form-cat:focus {
+  outline: none !important;
+  border: 2px solid #4B00FF;
+}
+
+.form-message {
+  width: 80%;
+  max-width: 80%;
+  min-width: 80%;
+  height: 100px;
+  max-height: 170px;
+  min-height: 60px;
+  border-radius: 28px;
+  border: 1px solid #000000;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 5px;
+  font-size: 16px;
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+.form-message:hover {
+  border: 1px solid #4B00FF;
+}
+
+.form-message:focus {
+  outline: none !important;
+  border: 2px solid #4B00FF;
+}
+
+.form-word-counter {
+  width: 80%;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-mini-desc {
+  width: 80%;
+  opacity: 0.8;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.form-check-wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+}
+
+.form-check {
+  height: 24px;
+  width: 24px;
+  border: #000000;
+  border-radius: 4px;
+  border: 1px solid #000000;
+  margin-right: 10px;
+}
+
+.form-check:hover {
+  outline: none !important;
+  border: 1px solid #4B00FF;
+}
+
+.form-check-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  align-self: center;
+  margin-right: 40px;
 }
 
 .submit-btn {
@@ -418,21 +583,110 @@ display: none;
   font-size: 18px;
   font-family: 'Montserrat', sans-serif;
   cursor: pointer;
-  margin-top: 30px;
   border: 0;
   box-shadow: 0px 3px 6px 0px #00000066;
 }
 
-.active, .dot:hover {
-  background-color: white;
+.submit-btn:hover {
+  background-color: #2d0194;
 }
 
-.map-dot:hover {
-  width: 358px;
-  height: 358px;
-  content: 'S.und@themail.com';
+.footer-wrapper {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 42px;
+  padding-right: 42px;
+}
+
+.copywrite-footer {
+  font-size: 16px;
+}
+
+.cookies-footer {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.big-dot {
+  background-color: #B4FF00;
+  width: 100%;
   color: #000000;
-  font-size: 22px;
+  transform: translate(-50%, -50%);
+  border-radius: 100% 100% 0 0;
+  height: 300px;
+  left: 50%;
+  top: 1500px;
+  position: absolute;
+  display: none;
+}
+
+/*Animations*/
+@media (min-width: 986px) {
+
+  .active,
+  .dot:hover {
+    background-color: white;
+  }
+
+  .img1:hover {
+    object-position: bottom;
+    transition: 0.3s ease-in-out;
+  }
+
+  .img2 {
+    animation: rotate-back 0.1s ease-out;
+  }
+
+  .img2:hover {
+    animation: rotate 0.1s ease-out;
+  }
+
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+
+  @keyframes rotate-back {
+    100% {
+      transform: rotate(-180deg);
+    }
+  }
+
+  .map-dot:hover {
+    width: 358px;
+    height: 358px;
+    position: absolute;
+    left: 30%;
+    bottom: 30%;
+    color: #000000;
+    font-size: 22px;
+    transition: 0.6s ease;
+  }
+
+  .dot-email {
+    overflow: hidden;
+    color: transparent;
+  }
+
+  .map-dot:hover .dot-email {
+    position: absolute;
+    left: 25%;
+    bottom: 50%;
+    color: #000000;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 2.2;
+    transition: 0.5s ease-in;
+  }
 }
 
 @media (max-width: 985px) {
@@ -466,4 +720,68 @@ display: none;
     position: unset;
     margin-left: 30px;
   }
+
+  .product-container {
+    padding-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .product-container.reversed {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img1 {
+    width: 100%;
+    object-fit: cover;
+
+    height: 200px;
+  }
+
+  .product-info {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .product-date {
+    padding-top: 30px;
+  }
+
+  .submit-btn {
+    width: 80%;
+  }
+
+  .map-form-wrapper {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .form-title {
+    margin-top: 0;
+  }
+
+  .map-img {
+    padding-top: 30px;
+    height: 360px;
+    object-fit: cover;
+  }
+
+  .map-dot {
+    cursor: pointer;
+  }
+
+
+  .dot-email {
+    display: none;
+  }
+
+  .cookies-footer {
+    display: none;
+  }
+
+
+
 }
