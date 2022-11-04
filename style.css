@@ -17,7 +17,7 @@ body {
   color: white;
   font-size: 38px;
   font: normal normal 800 38px/68px Montserrat;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   display: none;
   justify-content: center;
@@ -63,7 +63,7 @@ body {
 
 .navbar-links li a {
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: white;
   padding: 1rem;
   height: 24px;
@@ -100,8 +100,9 @@ body {
   align-items: center;
   color: #858585;
   font-size: 22;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-right: 50px;
+  cursor: pointer;
 }
 
 .navbar-language .focused {
@@ -138,7 +139,7 @@ body {
   justify-content: center;
   padding: 0;
   margin: 0;
-  margin-top: 44px;
+  margin-top: 70px;
   height: 300px;
 }
 
@@ -146,14 +147,14 @@ body {
   list-style: none;
   width: 100%;
   text-align: center;
-  padding-top: 10px;
+  padding-block: 10px;
 }
 
 .toggle-menu li a {
   text-decoration: none;
   font-size: 38px;
   color: black;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   letter-spacing: 0px;
 }
@@ -170,9 +171,10 @@ body {
   display: flex;
   align-items: center;
   font-size: 12;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding-bottom: 25px;
-  padding-top: 65px;
+  padding-top: 55px;
+  cursor: pointer;
 }
 
 .focused {
@@ -184,7 +186,7 @@ body {
   flex-direction: column;
   width: 100%;
   height: 260px;
-  background: #4B00FF 0% 0% no-repeat padding-box;
+  background: #4b00ff 0% 0% no-repeat padding-box;
 }
 
 .social-icons {
@@ -195,9 +197,13 @@ body {
   padding-top: 30px;
 }
 
+.social-icon {
+  cursor: pointer;
+}
+
 .cookies {
   color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 900;
   width: 80%;
@@ -205,10 +211,11 @@ body {
   align-self: center;
   justify-content: center;
   padding-top: 10px;
+  cursor: pointer;
 }
 
 .com-details {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   color: white;
   display: flex;
@@ -222,13 +229,13 @@ body {
 }
 
 .copywrite {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   color: white;
   display: flex;
   padding-left: 20px;
-  padding-top: 40px;
-
+  padding-top: 25px;
+  padding-bottom: 20px;
 }
 
 .main-page {
@@ -239,15 +246,51 @@ body {
   z-index: -1;
 }
 
-
-
 .carousel-wrapper {
   position: relative;
+  background-color: #000000;
 }
 
 .carousel-wrapper ul {
   margin: 0;
   padding: 0;
+}
+
+.carousel-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 100px;
+  font-weight: extraBold;
+  color: white;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 200px;
+  padding-left: 10%;
+  z-index: 1;
+}
+
+.carousel-green-underline {
+  background-color: #b4ff00;
+  width: 85px;
+  height: 10px;
+  position: absolute;
+  top: 310px;
+  margin-left: 10%;
+  z-index: 1;
+  left: 0;
+  animation: underline 0.4s ;
+  animation-timing-function: ease-in;
+}
+
+.carousel-desc {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  color: white;
+  width: 570px;
+  position: absolute;
+  top: 380px;
+  padding-left: 10%;
+  z-index: 1;
 }
 
 .slides {
@@ -258,6 +301,9 @@ body {
   width: 100%;
   object-fit: contain;
   max-height: fit-content;
+  animation: fadeIn 0.5s;
+  animation-timing-function: ease-in-out;
+  z-index: -1;
 }
 
 .dot-container {
@@ -272,10 +318,19 @@ body {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #9F9F9F;
+  background-color: #9f9f9f;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+}
+
+.dot-social-icons {
+  display: none;
+  align-self: center;
+  justify-content: space-evenly;
+  width: 50%;
+  padding-top: 30px;
+  filter: invert(1);
 }
 
 .products-wrapper {
@@ -283,7 +338,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 .product-container {
@@ -294,7 +348,6 @@ body {
 
 .product-container.reversed {
   flex-direction: row-reverse;
-
 }
 
 .reversed .product-img {
@@ -319,16 +372,16 @@ body {
 }
 
 .product-date {
-  color: #CFCFCF;
+  color: #cfcfcf;
   font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .product-title {
   padding-top: 10px;
   color: #000000;
   font-size: 32px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
 
@@ -337,17 +390,17 @@ body {
   max-width: 450px;
   color: #000000;
   font-size: 18px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .search-btn {
-  background-color: #4B00FF;
+  background-color: #4b00ff;
   color: white;
   width: 240px;
   height: 56px;
   border-radius: 42px;
   font-size: 18px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-top: 70px;
   cursor: pointer;
   border: 0;
@@ -362,15 +415,19 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: #f8f8f8;
+  margin-top: 70px;
 }
 
 .map-img {
   width: 100%;
   /*object-fit: contain;*/
+  max-height: 100%;
+  min-height: 100%;
 }
 
 .map-with-dot {
-  width: 100%;
+  width: 90%;
   position: relative;
 }
 
@@ -378,7 +435,7 @@ body {
   height: 32px;
   width: 32px;
   border-radius: 50%;
-  background-color: #B4FF00;
+  background-color: #b4ff00;
   position: absolute;
   left: 48%;
   bottom: 48%;
@@ -386,7 +443,7 @@ body {
 }
 
 .form-background {
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   width: 100%;
   z-index: -1;
 }
@@ -401,7 +458,7 @@ body {
 .form-title {
   font-size: 32px;
   font-weight: 900;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   z-index: 1;
   position: relative;
   width: 80%;
@@ -413,68 +470,81 @@ body {
   width: 80%;
   margin-top: 40px;
   margin-bottom: 40px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
 }
 
-.form-name {
+.form-field-wrapper {
+  position: relative;
   width: 80%;
+}
+
+.form-name {
+  width: 100%;
   height: 50px;
   border-radius: 28px;
   border: 1px solid #000000;
   margin-bottom: 40px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   padding-left: 40px;
 }
 
 .form-name:hover {
-  border: 1px solid #4B00FF;
+  border: 1px solid #4b00ff;
 }
 
 .form-name:focus {
   outline: none !important;
-  border: 2px solid #4B00FF;
+  border: 2px solid #4b00ff;
+}
+
+.form-check-mark {
+  color: #4b00ff;
+  position: absolute;
+  height: 50px;
+  right: 18px;
+  display: none;
 }
 
 .form-email {
-  width: 80%;
+  width: 100%;
   height: 50px;
   border-radius: 28px;
   border: 1px solid #000000;
   margin-bottom: 40px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   padding-left: 40px;
 }
 
 .form-email:hover {
-  border: 1px solid #4B00FF;
+  border: 1px solid #4b00ff;
 }
 
 .form-email:focus {
   outline: none !important;
-  border: 2px solid #4B00FF;
+  border: 2px solid #4b00ff;
 }
 
 .form-num {
-  width: 80%;
+  width: 100%;
   height: 50px;
   border-radius: 28px;
   border: 1px solid #000000;
   margin-bottom: 40px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   padding-left: 40px;
 }
 
 .form-num:hover {
-  border: 1px solid #4B00FF;
+  border: 1px solid #4b00ff;
 }
 
 .form-num:focus {
   outline: none !important;
-  border: 2px solid #4B00FF;
+  border: 2px solid #4b00ff;
 }
 
 .form-cat-wrapper {
@@ -489,18 +559,18 @@ body {
   height: 50px;
   border-radius: 28px;
   border: 1px solid #000000;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   padding-left: 40px;
 }
 
 .form-cat:hover {
-  border: 1px solid #4B00FF;
+  border: 1px solid #4b00ff;
 }
 
 .form-cat:focus {
   outline: none !important;
-  border: 2px solid #4B00FF;
+  border: 2px solid #4b00ff;
 }
 
 .form-message {
@@ -512,7 +582,7 @@ body {
   min-height: 60px;
   border-radius: 28px;
   border: 1px solid #000000;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 5px;
   font-size: 16px;
   padding-left: 40px;
@@ -520,12 +590,12 @@ body {
 }
 
 .form-message:hover {
-  border: 1px solid #4B00FF;
+  border: 1px solid #4b00ff;
 }
 
 .form-message:focus {
   outline: none !important;
-  border: 2px solid #4B00FF;
+  border: 2px solid #4b00ff;
 }
 
 .form-word-counter {
@@ -535,13 +605,13 @@ body {
   padding-right: 20px;
   padding-bottom: 30px;
   font-size: 15px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .form-mini-desc {
   width: 80%;
   opacity: 0.8;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   margin-bottom: 20px;
 }
@@ -564,24 +634,24 @@ body {
 
 .form-check:hover {
   outline: none !important;
-  border: 1px solid #4B00FF;
+  border: 1px solid #4b00ff;
 }
 
 .form-check-label {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   align-self: center;
   margin-right: 40px;
 }
 
 .submit-btn {
-  background-color: #4B00FF;
+  background-color: #4b00ff;
   color: white;
   width: 240px;
   height: 56px;
   border-radius: 42px;
   font-size: 18px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   cursor: pointer;
   border: 0;
   box-shadow: 0px 3px 6px 0px #00000066;
@@ -600,7 +670,7 @@ body {
   align-items: center;
   justify-content: space-between;
   color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding-left: 42px;
   padding-right: 42px;
 }
@@ -615,25 +685,38 @@ body {
 }
 
 .big-dot {
-  background-color: #B4FF00;
+  background-color: #b4ff00;
   width: 100%;
   color: #000000;
   transform: translate(-50%, -50%);
   border-radius: 100% 100% 0 0;
-  height: 300px;
+  height: 500px;
   left: 50%;
   top: 1500px;
-  position: absolute;
+  position: relative;
   display: none;
 }
 
 /*Animations*/
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}  
+}
+
+.active,
+.dot:hover {
+  background-color: white;
+}
+
+@keyframes underline {
+  0% {transform: scaleX(0);
+    transform-origin: bottom left;}
+  100% {transform: scaleX(1);
+    transform-origin: bottom left;}
+}
+
 @media (min-width: 986px) {
 
-  .active,
-  .dot:hover {
-    background-color: white;
-  }
 
   .img1:hover {
     object-position: bottom;
@@ -647,7 +730,6 @@ body {
   .img2:hover {
     animation: rotate 0.1s ease-out;
   }
-
 
   @keyframes rotate {
     100% {
@@ -683,7 +765,7 @@ body {
     bottom: 50%;
     color: #000000;
     font-size: 22px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 2.2;
     transition: 0.5s ease-in;
   }
@@ -719,6 +801,22 @@ body {
     height: 40px;
     position: unset;
     margin-left: 30px;
+  }
+
+  .carousel-title {
+    font-size: 38px;
+    top: 40px;
+  }
+
+  .carousel-green-underline {
+    top: 88px;
+    width: 40px;
+  }
+
+  .carousel-desc {
+    font-size: 18px;
+    width: 310px;
+    top: 118px;
   }
 
   .product-container {
@@ -757,10 +855,11 @@ body {
   .map-form-wrapper {
     flex-direction: column-reverse;
     justify-content: center;
+    margin-top: 0;
   }
 
-  .form-title {
-    margin-top: 0;
+  .map-with-dot {
+    width: 100%;
   }
 
   .map-img {
@@ -771,17 +870,56 @@ body {
 
   .map-dot {
     cursor: pointer;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-color: #b4ff00;
+    position: absolute;
+    left: 48%;
+    bottom: 44%;
+    transition: 0.6s ease;
   }
 
+  .map-dot:focus {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 20%;
+    bottom: 5%;
+    color: #000000;
+    font-size: 22px;
+    transition: 0.6s ease;
+  }
+
+  .map-dot:focus .dot-email {
+    position: absolute;
+    left: 25%;
+    bottom: 45%;
+    color: #000000;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    line-height: 2.2;
+    transition: 0.5s ease-in;
+  }
+
+  .map-dot:focus .dot-social-icons {
+    display: flex;
+    position: absolute;
+    left: 10%;
+    bottom: 30%;
+    width: 80%;
+  }
 
   .dot-email {
-    display: none;
+    overflow: hidden;
+    color: transparent;
+  }
+
+  .social-icons {
+    display: flex;
   }
 
   .cookies-footer {
     display: none;
   }
-
-
-
 }
