@@ -664,7 +664,6 @@ body {
 .footer-wrapper {
   width: 100%;
   height: auto;
-  position: relative;
   background-color: #000000;
   display: flex;
   align-items: center;
@@ -682,19 +681,6 @@ body {
 .cookies-footer {
   font-size: 18px;
   font-weight: 900;
-}
-
-.big-dot {
-  background-color: #b4ff00;
-  width: 100%;
-  color: #000000;
-  transform: translate(-50%, -50%);
-  border-radius: 100% 100% 0 0;
-  height: 500px;
-  left: 50%;
-  top: 1500px;
-  position: relative;
-  display: none;
 }
 
 /*Animations*/
@@ -761,7 +747,7 @@ body {
 
   .map-dot:hover .dot-email {
     position: absolute;
-    left: 25%;
+    left: 20%;
     bottom: 50%;
     color: #000000;
     font-size: 22px;
