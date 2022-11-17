@@ -32,7 +32,7 @@ body {
   background: #000000 0% 0% no-repeat padding-box;
   opacity: 1;
   height: 64px;
-  width: 100%;
+  width: 100vw;
   color: white;
   font-size: 18px;
   letter-spacing: 0px;
@@ -822,6 +822,7 @@ body {
     max-width: 450px;
     object-fit: cover;
     height: 200px;
+    width: 100%;
     padding: 0;
   }
 
